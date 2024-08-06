@@ -1,9 +1,4 @@
 import yfinance as yf
-import sys
-import os
-from dotenv import load_dotenv
-load_dotenv()
-sys.path.append(os.getenv('file_location'))
 from back.flow.index.spl_controll.create_table import index
 
 def get_index(ticker, start, end):

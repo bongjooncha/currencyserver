@@ -1,8 +1,3 @@
-import sys
-import os
-from dotenv import load_dotenv
-load_dotenv()
-sys.path.append(os.getenv('file_location'))
 from back.models import get_db_connection
 import pymysql
 

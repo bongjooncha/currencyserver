@@ -1,4 +1,9 @@
 from flask import Flask
+import sys
+import os
+from dotenv import load_dotenv
+load_dotenv()
+sys.path.append(os.getenv('file_location'))
 from flow.exchange.exchange import exchange_api
 from flow.index.index import index_api
 from flask_cors import CORS

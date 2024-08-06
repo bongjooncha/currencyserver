@@ -1,7 +1,3 @@
-# import sys
-# from dotenv import load_dotenv
-# load_dotenv()
-# sys.path.append(os.getenv('file_location'))
 from back.flow.exchange.spl_controll.insert import get_exchange_rate
 from back.flow.exchange.spl_controll.create_table import exchange
 
