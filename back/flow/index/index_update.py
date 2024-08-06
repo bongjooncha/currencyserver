@@ -1,5 +1,10 @@
-from tradeback.flow.index.spl_controll.insert import get_index
-from tradeback.flow.index.spl_controll.create_table import index
+import sys
+from dotenv import load_dotenv
+import os
+load_dotenv()
+sys.path.append(os.getenv('file_location'))
+from back.flow.index.spl_controll.insert import get_index
+from back.flow.index.spl_controll.create_table import index
 
 
 def index_update(start_date,end_date,DB):

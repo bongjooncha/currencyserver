@@ -2,9 +2,9 @@ import yfinance as yf
 import sys
 import os
 from dotenv import load_dotenv
-sys.path.append(os.getenv('file_location'))
 load_dotenv()
-from tradeback.flow.index.spl_controll.create_table import index
+sys.path.append(os.getenv('file_location'))
+from back.flow.index.spl_controll.create_table import index
 
 def get_index(ticker, start, end):
     data = yf.Ticker(ticker).history(start=start, end=end)

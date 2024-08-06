@@ -1,10 +1,10 @@
 import sys
 import os
 from dotenv import load_dotenv
-sys.path.append("c:/Users/OWNER/Desktop/coding_project/autotrade_back_front/trade")
 load_dotenv()
+sys.path.append(os.getenv('file_location'))
 from flask import Blueprint, jsonify, request
-from tradeback.models import get_db_connection
+from back.models import get_db_connection
 
 exchange_api = Blueprint('exchange',__name__)
 

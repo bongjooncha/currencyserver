@@ -1,5 +1,9 @@
-from tradeback.flow.exchange.spl_controll.insert import get_exchange_rate
-from tradeback.flow.exchange.spl_controll.create_table import exchange
+# import sys
+# from dotenv import load_dotenv
+# load_dotenv()
+# sys.path.append(os.getenv('file_location'))
+from back.flow.exchange.spl_controll.insert import get_exchange_rate
+from back.flow.exchange.spl_controll.create_table import exchange
 
 def exchange_update(start_date,end_date,DB):
     base = "USD"
