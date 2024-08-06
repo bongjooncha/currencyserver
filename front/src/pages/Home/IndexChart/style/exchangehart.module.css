@@ -1,0 +1,45 @@
+/* main */
+.index {
+  display: flex;
+  justify-content: space-between; /* 내부 요소를 양쪽 끝으로 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  width: 100%; /* 필요에 따라 조정 */
+  margin-top: 50px;
+}
+
+.indexButton {
+  border: solid black 2px;
+  border-radius: 1%;
+  padding: 1%;
+  font-size: 14px;
+}
+
+/* indexChart */
+.indexChart {
+  margin: 0 5vw;
+  width: 50vw;
+}
+.chart {
+  height: 100vh;
+}
+
+/* IndexButton. */
+.indexButton {
+  width: 29vw;
+  margin: 0 5vw;
+}
+
+.indexGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3열로 설정 */
+  gap: 10px; /* 각 항목 사이의 간격 설정 */
+}
+
+.indexItem {
+  display: flex;
+  align-items: center; /* 체크박스와 레이블을 세로 중앙 정렬 */
+}
+
+.dataControll {
+  float: right;
+}
