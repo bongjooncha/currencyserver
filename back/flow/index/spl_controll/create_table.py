@@ -1,14 +1,9 @@
-import sys
-import os
-from dotenv import load_dotenv
-load_dotenv()
-sys.path.append(os.getenv('file_location'))
-from back.models import get_db_connection
+import back.config
 import pymysql
 
 class index():
     def create_insert_to_table(data, ta_name, place):
-        connection = get_db_connection(place,"index")
+        connection = back.config.get_db_connection(place,"index")
         table_name = f"`{ta_name}`"
         try:
             with connection.cursor() as cursor:
@@ -51,7 +46,7 @@ class index():
             connection.close()
 
     def delete_table(table_name,place):
-        connection = get_db_connection(place,"exchange_rate")
+        connection = back.config.get_db_connection(place,"exchange_rate")
         try:
             with connection.cursor() as cursor:
                 # 테이블 삭제 쿼리 실행

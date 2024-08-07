@@ -1,10 +1,5 @@
-import sys
-import os
-from dotenv import load_dotenv
-load_dotenv()
-sys.path.append(os.getenv('file_location'))
+import back.config
 from flask import Blueprint, jsonify, request
-from back.models import get_db_connection
 
 index_api = Blueprint('index',__name__)
 
@@ -12,7 +7,7 @@ index_api = Blueprint('index',__name__)
 @index_api.route("/average", methods=['POST'])
 def index_average():
     index = request.json['index']
-    conn = get_db_connection("AWS","index")
+    conn = back.config.get_db_connection(back.config.DB,"index")
     try:
         with conn.cursor() as cursor:
             query = "SELECT AVG(Close) FROM `{}`".format(index)
@@ -28,7 +23,7 @@ def index_average():
 @index_api.route("/price", methods=['POST'])
 def index_price():
     index = request.json['index']
-    conn = get_db_connection("AWS","index")
+    conn = back.config.get_db_connection(back.config.DB,"index")
     try:
         with conn.cursor() as cursor:
             query = "SELECT Date,Close FROM `{}`".format(index)

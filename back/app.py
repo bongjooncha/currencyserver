@@ -1,9 +1,5 @@
 from flask import Flask
-import sys
-import os
-from dotenv import load_dotenv
-load_dotenv()
-sys.path.append(os.getenv('file_location'))
+import config
 from flow.exchange.exchange import exchange_api
 from flow.index.index import index_api
 from flask_cors import CORS
@@ -20,7 +16,6 @@ current_time = datetime.datetime.now()
 one_day_ago = current_time - datetime.timedelta(days=5)
 start_date = one_day_ago.strftime("%Y-%m-%d")
 end_date = current_time.strftime("%Y-%m-%d")
-DB="AWS"
 
 def run_schedule():
     while True:
@@ -28,8 +23,8 @@ def run_schedule():
         time.sleep(3)
 
 def update():
-    exchange_update(start_date,end_date,DB)
-    index_update(start_date,end_date,DB)
+    exchange_update(start_date,end_date,config.DB)
+    index_update(start_date,end_date,config.DB)
 
 
 app = Flask(__name__)

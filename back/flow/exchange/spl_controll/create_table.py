@@ -1,4 +1,4 @@
-from back.models import get_db_connection
+from back.config import get_db_connection
 import pymysql
 
 class exchange():

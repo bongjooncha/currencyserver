@@ -21,9 +21,6 @@ tickers = {
 # # 생성 및 정보 입력
 # for ticker in tickers:
 #     print(ticker," 시작")
-#     index_data = get_index(ticker,"2018-01-01", "2024-08-04")
-#     index.create_insert_to_table(index_data['data'], ticker, "AWS")
+#     index_data = get_index(ticker,"2024-08-01", "2024-08-07")
+#     index.create_insert_to_table(index_data['data'], ticker, back.config.DB)
 #     print(ticker," 끝")
-
-index_data = get_index("^VIX","2024-08-01", "2024-08-05")
-index.create_insert_to_table(index_data['data'], "^VIX", "AWS")

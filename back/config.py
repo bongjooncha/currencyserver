@@ -1,10 +1,11 @@
+import sys
+import os
 import pymysql
 from dotenv import load_dotenv
-import os
-
 load_dotenv()
+sys.path.append(os.getenv('file_location'))
+DB="local"
 
-#place = "local" or "AWS"
 def get_db_connection(place,schema_name):
     db_host = os.getenv(f'{place}_DB_HOST')
     db_user = os.getenv(f'{place}_DB_USER')
