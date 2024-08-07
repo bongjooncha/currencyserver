@@ -1,5 +1,5 @@
-from back.flow.index.spl_controll.insert import get_index
-from back.flow.index.spl_controll.create_table import index
+from back.api.flow.index.spl_controll.insert import get_index
+from back.api.flow.index.spl_controll.create_table import index
 
 
 def index_update(start_date,end_date,DB):

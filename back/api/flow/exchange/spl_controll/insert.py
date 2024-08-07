@@ -1,5 +1,5 @@
 import yfinance as yf
-from back.flow.exchange.spl_controll.create_table import exchange
+from back.api.flow.exchange.spl_controll.create_table import exchange
 
 def get_exchange_rate(currency_pair,start,end):
     start_date = start

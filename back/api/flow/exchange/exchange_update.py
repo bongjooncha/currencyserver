@@ -1,8 +1,8 @@
-from back.flow.exchange.spl_controll.insert import get_exchange_rate
-from back.flow.exchange.spl_controll.create_table import exchange
+from back.api.flow.exchange.spl_controll.insert import get_exchange_rate
+from back.api.flow.exchange.spl_controll.create_table import exchange
 import back.config
 
-def exchange_update(start_date,end_date,DB):
+def exchange_update(start_date,end_date):
     base = "USD"
     exes = [
         'KRW', 'EUR', 'JPY', 'GBP', 'CHF', 'AUD', 'CAD', 'NZD', 'CNY', 'HKD',
