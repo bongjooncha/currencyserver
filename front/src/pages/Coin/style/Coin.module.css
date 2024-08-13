@@ -1,0 +1,13 @@
+.market_body {
+  margin-left: 5vw;
+}
+
+.trade_body {
+  display: flex;
+  flex-direction: column;
+}
+
+.trade_body .trade_main {
+  display: flex;
+  flex-direction: row;
+}

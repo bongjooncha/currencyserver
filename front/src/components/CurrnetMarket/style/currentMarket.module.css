@@ -1,0 +1,43 @@
+.tabContainer li {
+  width: 33.3%;
+}
+.tabContainer button {
+  width: 100%;
+}
+
+#currentMarket {
+  width: 20vw;
+}
+
+#box {
+  border-bottom: 1px black solid;
+  margin: 2vh;
+}
+
+.table {
+  width: 100%;
+}
+
+.table tr td {
+  border-right: rgba(128, 128, 128, 0.423) 1px solid;
+}
+
+.table tr .coinName {
+  width: 33%;
+}
+.table tr .coinPrice {
+  width: 33%;
+}
+.table tr .percent {
+  width: 33%;
+}
+.table tr .percent div {
+  margin: 10%;
+}
+
+.tabContent {
+  max-height: 80vh;
+  overflow-y: auto;
+  overflow-x: visible;
+  color: black;
+}
